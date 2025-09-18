@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@module-federation/nextjs-mf": "^8.8.41",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
