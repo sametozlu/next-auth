@@ -1,5 +1,7 @@
 import { auth, signOut } from "@/auth";
 
+export const dynamic = "force-dynamic";
+
 export default async function DashboardPage() {
   const session = await auth();
   return (

@@ -1,5 +1,6 @@
 import { auth } from "@/auth";
 import { NextResponse, type NextRequest } from "next/server";
+import type { Session } from "next-auth";
 
 const PUBLIC_PATHS: RegExp[] = [
   /^\/$/,
@@ -20,7 +21,7 @@ export default async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const session = await auth();
+  const session = (await auth()) as Session & { user?: Session["user"] & { roles?: string[] } } | null;
 
   if (!session) {
     const loginUrl = new URL("/login", request.url);
@@ -28,7 +29,7 @@ export default async function middleware(request: NextRequest) {
     return NextResponse.redirect(loginUrl);
   }
 
-  const roles: string[] = ((session as any).user?.roles as string[]) || [];
+  const roles: string[] = session?.user?.roles ?? [];
 
   // RBAC example: protect /admin with admin role
   if (pathname.startsWith("/admin") && !roles.includes("admin")) {

@@ -1,9 +1,12 @@
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
+import type { Session } from "next-auth";
+
+export const dynamic = "force-dynamic";
 
 export default async function AdminPage() {
-  const session = await auth();
-  const roles: string[] = ((session as any)?.user?.roles as string[]) || [];
+  const session = (await auth()) as Session & { user?: Session["user"] & { roles?: string[] } } | null;
+  const roles: string[] = session?.user?.roles ?? [];
   if (!roles.includes("admin")) {
     redirect("/403");
   }
