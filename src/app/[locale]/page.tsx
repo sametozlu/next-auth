@@ -19,7 +19,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
 			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
 				{products.map((p) => (
 					<Link key={p.id} href={`/${params.locale}/products/${p.id}`} className="border rounded p-4 hover:shadow">
-                <Image src={p.image} alt={p.title} width={400} height={400} className="h-40 w-full object-contain" />
+                <Image src={p.image} alt={p.title} width={400} height={400} sizes="(max-width: 768px) 50vw, 25vw" priority className="h-40 w-full object-contain" />
 						<div className="mt-2 text-sm line-clamp-2">{p.title}</div>
 						<div className="font-medium mt-1">${p.price.toFixed(2)}</div>
 					</Link>

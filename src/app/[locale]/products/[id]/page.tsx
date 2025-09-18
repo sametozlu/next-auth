@@ -28,7 +28,7 @@ export default async function ProductDetail({ params }: { params: { id: string; 
   return (
     <main className="p-6 max-w-5xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Image src={p.image} alt={p.title} width={600} height={600} className="w-full h-96 object-contain border rounded" />
+        <Image src={p.image} alt={p.title} width={600} height={600} sizes="(max-width: 768px) 100vw, 50vw" priority className="w-full h-96 object-contain border rounded" />
         <div>
           <h1 className="text-2xl font-semibold">{p.title}</h1>
           <div className="mt-2 text-gray-600">{p.category}</div>

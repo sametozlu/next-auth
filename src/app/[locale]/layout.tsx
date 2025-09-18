@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 		template: "%s | E-Commerce",
 	},
 	description: "SEO friendly e-commerce demo",
+	manifest: "/manifest.webmanifest",
 };
 
 export default async function LocaleLayout({

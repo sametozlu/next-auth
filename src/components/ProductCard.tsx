@@ -12,7 +12,7 @@ function ProductCardBase({ id, title, price, image, href }: Props) {
   return (
     <div className="border rounded p-4 hover:shadow transition">
       <Link href={href} className="block">
-        <Image src={image} alt={title} width={400} height={400} className="h-40 w-full object-contain" />
+        <Image src={image} alt={title} width={400} height={400} sizes="(max-width: 768px) 50vw, 25vw" priority className="h-40 w-full object-contain" />
         <div className="mt-2 text-sm line-clamp-2">{title}</div>
         <div className="font-medium mt-1">${price.toFixed(2)}</div>
       </Link>
