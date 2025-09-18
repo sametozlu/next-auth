@@ -45,6 +45,12 @@ const cartSlice = createSlice({
   },
 });
 
+// persistence helpers
+export function serializeCart(items: Record<number, CartItem>): string {
+  return JSON.stringify(items);
+}
+
+
 export const { addToCart, removeFromCart, setQuantity, clearCart } = cartSlice.actions;
 export default cartSlice.reducer;
 

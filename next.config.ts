@@ -9,6 +9,17 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    if (process.env.NODE_ENV === "development") {
+      return [
+        {
+          source: "/cart/:path*",
+          destination: "http://localhost:3001/:path*",
+        },
+      ];
+    }
+    return [];
+  },
 };
 
 export default nextConfig;
