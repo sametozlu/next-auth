@@ -1,0 +1,9 @@
+{
+  "nav": {"home": "Home", "products": "Products", "cart": "Cart"},
+  "home": {"title": "Featured Products"},
+  "products": {"title": "Products", "filter": "Filter", "price": "Price", "category": "Category", "sort": "Sort", "asc": "Price: Low to High", "desc": "Price: High to Low"},
+  "product": {"addToCart": "Add to Cart"},
+  "cart": {"title": "Your Cart", "empty": "Your cart is empty"}
+}
+
+

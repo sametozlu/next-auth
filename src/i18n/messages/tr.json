@@ -1,0 +1,9 @@
+{
+  "nav": {"home": "Ana Sayfa", "products": "Ürünler", "cart": "Sepet"},
+  "home": {"title": "Öne Çıkan Ürünler"},
+  "products": {"title": "Ürünler", "filter": "Filtre", "price": "Fiyat", "category": "Kategori", "sort": "Sırala", "asc": "Fiyat: Artan", "desc": "Fiyat: Azalan"},
+  "product": {"addToCart": "Sepete Ekle"},
+  "cart": {"title": "Sepetin", "empty": "Sepetin boş"}
+}
+
+
