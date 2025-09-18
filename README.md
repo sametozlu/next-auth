@@ -27,3 +27,27 @@ npm run dev
 
 - Add `roles` to the ID token via Actions/Rules or a namespaced claim `AUTH0_ROLES_NAMESPACE`.
 - `/admin` requires `admin` role; others can access `/dashboard`.
+
+## Stage 2: E‑Commerce (TR/EN, ISR, SEO)
+
+Routes
+
+- Home (featured): `/{locale}` -> `/tr`, `/en`
+- Products: `/{locale}/products`
+- Product detail: `/{locale}/products/{id}`
+- Cart: `/{locale}/cart`
+
+Tech
+
+- next-intl for i18n, Redux Toolkit for cart, ISR for data fetching, next/image for perf, Tailwind for UI.
+
+Deploy (Vercel)
+
+- Set envs on Vercel: `NEXTAUTH_URL`, `NEXTAUTH_SECRET`, `AUTH0_ISSUER`, `AUTH0_CLIENT_ID`, `AUTH0_CLIENT_SECRET`
+- Import GitHub repo and Deploy
+
+SEO/PWA
+
+- `public/manifest.webmanifest`
+- `app/robots.txt/route.ts`
+- `app/sitemap.xml/route.ts`
