@@ -16,6 +16,12 @@ export const metadata: Metadata = {
 	},
 	description: "SEO friendly e-commerce demo",
 	manifest: "/manifest.webmanifest",
+	alternates: {
+		languages: {
+			"en": "/en",
+			"tr": "/tr",
+		},
+	},
 };
 
 export default async function LocaleLayout({

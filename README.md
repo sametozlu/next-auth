@@ -49,5 +49,6 @@ Deploy (Vercel)
 SEO/PWA
 
 - `public/manifest.webmanifest`
-- `app/robots.txt/route.ts`
-- `app/sitemap.xml/route.ts`
+- `app/robots.ts`
+- `app/sitemap.ts`
+- `public/icons.json` (ikon yer tutucu; gerçek 192/512 ikonlarını ekleyin)
